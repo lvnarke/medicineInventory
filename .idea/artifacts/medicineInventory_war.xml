@@ -1,14 +1,14 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="weatherReportProject:war">
+  <artifact type="war" name="medicineInventory:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <properties id="maven-jee-properties">
       <options>
-        <module>weatherReportProject</module>
+        <module>medicineInventory</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="archive" name="SampleServlet.war">
-      <element id="artifact" artifact-name="weatherReportProject:war exploded" />
+      <element id="artifact" artifact-name="medicineInventory:war exploded" />
     </root>
   </artifact>
 </component>
