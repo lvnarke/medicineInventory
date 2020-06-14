@@ -15,45 +15,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40c676f6-1df6-4605-9ece-6569d630ae74" name="Default Changelist" comment="second commit">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_06.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_SparseBitSet_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_4_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/medicine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/medicineInventory.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pharmacy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/~$medicineInventory.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/medicineInventory_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/medicineInventory_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_4_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_4_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_3_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" beforeDir="false" />
+    <list default="true" id="40c676f6-1df6-4605-9ece-6569d630ae74" name="Default Changelist" comment="next commit with fixing required for update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medicineInventory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/medicineInventory.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medicineInventory.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sample/inventoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sample/inventoryServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/geoLocation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/table.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/temperature.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/weather.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sample/inventoryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sample/inventoryServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2020-06-14" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,7 +284,7 @@
       <workItem from="1591864384476" duration="2188000" />
       <workItem from="1591875095060" duration="3519000" />
       <workItem from="1592060338292" duration="608000" />
-      <workItem from="1592073468633" duration="10306000" />
+      <workItem from="1592073468633" duration="10917000" />
     </task>
     <task id="LOCAL-00001" summary="Backend-Frontend Integration">
       <created>1591038742460</created>
@@ -414,7 +377,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592149067037</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="next commit with fixing required for update">
+      <created>1592160030068</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1592160030068</updated>
+    </task>
+    <task id="LOCAL-00015" summary="next commit with fixing required for update">
+      <created>1592160182255</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1592160182255</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +417,8 @@
     <MESSAGE value="Final commit with all working components" />
     <MESSAGE value="first commit" />
     <MESSAGE value="second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+    <MESSAGE value="next commit with fixing required for update" />
+    <option name="LAST_COMMIT_MESSAGE" value="next commit with fixing required for update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="591" y="288" key="#Azure_Web_App:_LiquorStoreApp:assetDeclare" timestamp="1589145332629">
@@ -587,10 +565,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="658" y="296" key="SubscriptionsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1589144978890" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1592149097828">
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1592160208411">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1592149097828" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1592160208411" />
     <state x="764" y="426" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1590870233738">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
