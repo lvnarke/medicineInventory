@@ -1,12 +1,11 @@
 package com.sample;//package com.sample;
 
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,15 +18,8 @@ import java.util.*;
 @WebServlet(urlPatterns = {"/submit","/update","/view"})
 
 public class inventoryServlet extends HttpServlet{
-    static ArrayList<Float> values = new ArrayList<>();
-
-    static int counter = 3;
-
-    Map<String, Object[]> data = new TreeMap<String, Object[]>();
-    void excelSetup(){
 
 
-    }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -42,43 +34,53 @@ public class inventoryServlet extends HttpServlet{
                 System.out.println("Inside submit servlet");
 
 
+
                 String medicineName = req.getParameter("medicinename");
                 String medicineId = req.getParameter("id");
                 String unitValue = req.getParameter("unitValue");
                 Integer number = Integer.parseInt(req.getParameter("number")+"");
 
-                FileInputStream file = new FileInputStream(new File("medicineInventory.xlsx"));
-                XSSFWorkbook workbook = new XSSFWorkbook(file);
-                // Create a blank sheet
-                XSSFSheet sheet = workbook.getSheet("medicineDetails");
-
-                data.put("1",new Object[]{medicineName,medicineId,unitValue,number});
-
-                Set<String> keyset = data.keySet();
-                int rownum = 0;
-                for (String key : keyset) {
-                    // this creates a new row in the sheet
-                    Row row = sheet.createRow(rownum++);
-                    Object[] objArr = data.get(key);
-                    int cellnum = 0;
-                    for (Object obj : objArr) {
-                        // this line creates a cell in the next column of that row
-                        Cell cell = row.createCell(cellnum++);
-                        if (obj instanceof String)
-                            cell.setCellValue((String)obj);
-                        else if (obj instanceof Integer)
-                            cell.setCellValue((Integer)obj);
-                    }
-                }
                 try {
-                    // this Writes the workbook gfgcontribute
-                    FileOutputStream out = new FileOutputStream(new File("medicineInventory.xlsx"));
-                    workbook.write(out);
-                    out.close();
-                    System.out.println("medicineInventory.xlsx written successfully on disk.");
+
+                    FileInputStream file = new FileInputStream(new File("medicineInventory.xlsx"));
+                    XSSFWorkbook workbook = new XSSFWorkbook(file);
+                    XSSFSheet sheet = workbook.getSheet("medicineDetails");
+                    Object[][] bookData = {
+
+                            {medicineName, medicineId, unitValue, number},
+                    };
+
+                    int rowCount = sheet.getLastRowNum();
+
+                    for (Object[] aBook : bookData) {
+                        Row row = sheet.createRow(++rowCount);
+
+                        int columnCount = 0;
+
+                        Cell cell = row.createCell(columnCount);
+                        cell.setCellValue(rowCount);
+
+                        for (Object field : aBook) {
+                            cell = row.createCell(++columnCount);
+                            if (field instanceof String) {
+                                cell.setCellValue((String) field);
+                            } else if (field instanceof Integer) {
+                                cell.setCellValue((Integer) field);
+                            }
+                        }
+
+                    }
+
+                    file.close();
+
+                    FileOutputStream outputStream = new FileOutputStream("medicineInventory.xlsx");
+                    workbook.write(outputStream);
+
+                    outputStream.close();
                 }
-                catch (Exception e) {
-                    e.printStackTrace();
+                 catch (IOException | EncryptedDocumentException
+                         ex) {
+                    ex.printStackTrace();
                 }
 
 
@@ -131,6 +133,10 @@ public class inventoryServlet extends HttpServlet{
 
             }
             break;
+
+            case "/update" :{
+
+            }
 
         }
 
