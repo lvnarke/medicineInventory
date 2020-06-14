@@ -103,20 +103,17 @@
 
             <div class="row">
                 <div class="col-sm-6 ">
+                    <!--                    <h1>Enter the location name</h1>-->
 
-                    <form action="submit" method="post">
-                        <label for="medicinename">Medicine name:</label><br>
-                        <input type="text" id="medicinename" name="medicinename"  required><br>
-                        <label for="id">Medicine Number:</label><br>
-                        <input type="text" id="id" name="id"  required><br><br>
-                        <label for="unitValue">Enter cost of a unit:</label><br>
-                        <input type="text" id="unitValue" name="unitValue" required><br><br>
-                        <label for="number">Enter number of units:</label><br>
-                        <input type="text" id="number" name="number" required><br><br>
-                        <input type="submit" value="Submit">
-                    </form>
+                    <table id="table_id" class="display">
+                        <thead>
+
+                        </thead>
+                        <tbody>
 
 
+                        </tbody>
+                    </table>
 
 
                 </div>
@@ -128,7 +125,7 @@
 
         </div>
     </section>
-
+    <!-- End Contact Section -->
 
 </main><!-- End #main -->
 
@@ -171,6 +168,109 @@
 <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+
+<script>
+
+
+    function requestData() {
+        var fileName = document.getElementById("uniqueCode").value
+        makeRequest(fileName)
+        console.log(fileName)
+    }
+
+
+    // $('#table_id').on( 'click', 'tbody td', function () {
+    //     table_id.cell( this ).edit();
+    // } );
+
+
+    var jsonTable=[{"Medicine":"paracetamol","Id":"id02","Quantity":"2","Sold":"5"},{"Medicine":"paracetamol","Id":"id01","Quantity":"2","Sold":"5"},{"Medicine":"Ibriprofen","Id":"id03","Quantity":"2","Sold":"9"}];
+    var ExcelToJSON = function() {
+
+        this.parseExcel = function(file) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var data = e.target.result;
+                var workbook = XLSX.read(data, {
+                    type: 'binary'
+                });
+
+                workbook.SheetNames.forEach(function(sheetName) {
+                    // Here is your object
+                    var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+                    var json_object = JSON.stringify(XL_row_object);
+                    console.log(json_object);
+                    jsonTable=XL_row_object;
+                    setTabledata()
+
+
+
+
+                })
+
+            };
+
+            reader.onerror = function(ex) {
+                console.log(ex);
+            };
+
+            reader.readAsBinaryString(file);
+        };
+    };
+    // function loadFile(filePath) {
+    //     var result = null;
+    //     var xmlhttp = new XMLHttpRequest();
+    //     xmlhttp.open("GET", filePath, false);
+    //     xmlhttp.responseType = 'blob';
+    //     xmlhttp.send();
+    //     if (xmlhttp.status==200) {
+    //         result = xmlhttp.responseText;
+    //     }
+    //     return result;
+    // }
+    var file1;
+    jQuery.ajax({
+        url:'medicineInventory.xlsx',
+        cache:false,
+        xhr:function(){// Seems like the only way to get access to the xhr object
+            var xhr = new XMLHttpRequest();
+            xhr.responseType= 'blob'
+            return xhr;
+        },
+        success: function(data){
+            file1=data;
+            var xl2json = new ExcelToJSON();
+            xl2json.parseExcel(file1);
+
+
+
+        },
+        error:function(){
+
+        }
+    });
+    var dataIsSet=false
+    //setTimeout(setTabledata, 3000);
+    function setTabledata() {
+
+        $('#table_id').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'csv', 'excel', 'pdf', 'print'
+            ],
+            data: jsonTable,
+            columns: [
+                {data:'SL'},
+                {data: 'Medicine'},
+                {data: 'Id'},
+                {data: 'Quantity'},
+                {data: 'Sold'}
+            ]
+
+        });
+    }
+</script>
 
 
 </body>

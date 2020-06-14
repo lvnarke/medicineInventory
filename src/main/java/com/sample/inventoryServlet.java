@@ -3,6 +3,8 @@ package com.sample;//package com.sample;
 
 
 import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -18,6 +20,7 @@ import java.util.*;
 @WebServlet(urlPatterns = {"/submit","/update","/view"})
 
 public class inventoryServlet extends HttpServlet{
+    String filePath="";
 
 
     @Override
@@ -32,6 +35,8 @@ public class inventoryServlet extends HttpServlet{
             case "/submit":{
 
                 System.out.println("Inside submit servlet");
+                String absoluteDiskPath = getServletContext().getRealPath("medicineInventory.xlsx");
+                filePath=absoluteDiskPath;
 
 
 
@@ -42,7 +47,7 @@ public class inventoryServlet extends HttpServlet{
 
                 try {
 
-                    FileInputStream file = new FileInputStream(new File("medicineInventory.xlsx"));
+                    FileInputStream file = new FileInputStream(new File(filePath));
                     XSSFWorkbook workbook = new XSSFWorkbook(file);
                     XSSFSheet sheet = workbook.getSheet("medicineDetails");
                     Object[][] bookData = {
@@ -71,70 +76,75 @@ public class inventoryServlet extends HttpServlet{
 
                     }
 
-                    file.close();
 
-                    FileOutputStream outputStream = new FileOutputStream("medicineInventory.xlsx");
+
+                    FileOutputStream outputStream = new FileOutputStream(filePath);
                     workbook.write(outputStream);
-
+                    outputStream.flush();
                     outputStream.close();
+                    file.close();
                 }
-                 catch (IOException | EncryptedDocumentException
-                         ex) {
+                catch (IOException | EncryptedDocumentException
+                        ex) {
                     ex.printStackTrace();
                 }
+                System.out.println("Done Adding new Row");
 
 
-
-
-
-            }
-            break;
-            case "/view":{
-
-                System.out.println("Inside view servlet");
-
-                try {
-                    FileInputStream file = new FileInputStream(new File("medicineInventory.xlsx"));
-
-                    // Create Workbook instance holding reference to .xlsx file
-                    XSSFWorkbook workbook = new XSSFWorkbook(file);
-
-                    // Get first/desired sheet from the workbook
-                    XSSFSheet sheet = workbook.getSheetAt(0);
-
-                    // Iterate through each rows one by one
-                    Iterator<Row> rowIterator = sheet.iterator();
-                    while (rowIterator.hasNext()) {
-                        Row row = rowIterator.next();
-                        // For each row, iterate through all the columns
-                        Iterator<Cell> cellIterator = row.cellIterator();
-
-                        while (cellIterator.hasNext()) {
-                            Cell cell = cellIterator.next();
-                            // Check the cell type and format accordingly
-                            switch (cell.getCellType()) {
-                                case Cell.CELL_TYPE_NUMERIC:
-                                    System.out.print(cell.getNumericCellValue() + "t");
-
-                                    break;
-                                case Cell.CELL_TYPE_STRING:
-                                    System.out.print(cell.getStringCellValue() + "t");
-                                    break;
-                            }
-                        }
-                        System.out.println("");
-                    }
-                    file.close();
-                }
-                catch (Exception e) {
-                    e.printStackTrace();
-                }
 
 
             }
             break;
 
             case "/update" :{
+
+                System.out.println("Inside update servlet");
+                String medicineName = req.getParameter("medicinename");
+                String medicineId = req.getParameter("id");
+                String addOrSold = req.getParameter("addorsold");
+                Integer number = Integer.parseInt(req.getParameter("number")+"");
+
+                Integer updatedNumber = 0;
+
+                if(addOrSold.equals("-1")){
+                        number = -number;
+
+                }
+
+                try {
+                    String absoluteDiskPath = getServletContext().getRealPath("medicineInventory.xlsx");
+                    filePath = absoluteDiskPath;
+                    FileInputStream file = new FileInputStream(new File(filePath));
+
+                    XSSFWorkbook workbook = new XSSFWorkbook(file);
+                    XSSFSheet sheet = workbook.getSheetAt(0);
+                    Cell cell = null;
+
+
+                    cell = sheet.getRow(3).getCell(3);
+                    String cellVal = cell.getStringCellValue();
+                    System.out.println("Cellvalue is "+cellVal);
+
+                    if(cellVal.equals(medicineId)){
+
+                        Integer existingNumber = Integer.parseInt(sheet.getRow(3).getCell(4)+"");
+                        updatedNumber = existingNumber + number;
+                        cell = sheet.getRow(3).getCell(4);
+                        cell.setCellValue(updatedNumber);
+                    }
+
+                    file.close();
+
+                    FileOutputStream outFile = new FileOutputStream(new File(filePath));
+                    workbook.write(outFile);
+                    outFile.close();
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
 
             }
 
@@ -143,5 +153,3 @@ public class inventoryServlet extends HttpServlet{
 
     }
 }
-
-
