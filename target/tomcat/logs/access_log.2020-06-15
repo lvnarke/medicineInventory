@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:00:01:32 +0530] "GET /medicineInventory HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:00:01:32 +0530] "GET /medicineInventory/assets/js/azure-storage-blob.js HTTP/1.1" 404 1049 http-bio-8080-exec-3 18
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:00:01:35 +0530] "GET /medicineInventory/assets/js/azure-storage-blob.js HTTP/1.1" 404 1049 http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:00:01:44 +0530] "POST /medicineInventory/update HTTP/1.1" 200 - http-bio-8080-exec-5 564
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:00:06:11 +0530] "GET /medicineInventory HTTP/1.1" 302 - http-bio-8080-exec-8 0
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:00:06:11 +0530] "GET /medicineInventory/assets/js/azure-storage-blob.js HTTP/1.1" 404 1049 http-bio-8080-exec-10 2
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:00:06:13 +0530] "GET /medicineInventory/assets/js/azure-storage-blob.js HTTP/1.1" 404 1049 http-bio-8080-exec-10 1
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:00:06:21 +0530] "POST /medicineInventory/update HTTP/1.1" 200 - http-bio-8080-exec-10 40
