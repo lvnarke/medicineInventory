@@ -16,7 +16,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40c676f6-1df6-4605-9ece-6569d630ae74" name="Default Changelist" comment="next commit with fixing required for update">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Ajjaya.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pharmacy.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sample/inventoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sample/inventoryServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/medicine.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/medicine.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/medicineInventory.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/medicineInventory.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pharmacy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/result.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/~$medicineInventory.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sample/inventoryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sample/inventoryServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2020-06-15" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +100,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -95,27 +110,27 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.sample" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="C:\Users\Lakshmi\Desktop\assetSummary\src\main\webapp" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sample" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn clean install" />
       <command value="mvn clean " />
+      <command value="mvn clean install" />
       <command value="mvn tomcat7:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Unnamed">
+  <component name="RunManager" selected="Azure Web App.MedicineInventory">
     <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.30" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/weatherReportProject_war_exploded/" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -220,6 +235,39 @@
         <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="package" />
       </method>
     </configuration>
+    <configuration name="MedicineInventory" type="com.microsoft.intellij.run.configuration.WebAppConfigurationType" factoryName="Azure Web App">
+      <option name="OS" value="linux" />
+      <option name="appServicePlanId" value="" />
+      <option name="appServicePlanName" value="" />
+      <option name="creatingAppServicePlan" value="false" />
+      <option name="creatingNew" value="false" />
+      <option name="creatingResGrp" value="false" />
+      <option name="deployToRoot" value="true" />
+      <option name="deployToSlot" value="false" />
+      <option name="jdkVersion">
+        <JavaVersion />
+      </option>
+      <option name="newSlotConfigurationSource" />
+      <option name="newSlotName" />
+      <option name="openBrowserAfterDeployment" value="true" />
+      <option name="pricing" value="" />
+      <option name="region" value="" />
+      <option name="resourceGroup" value="" />
+      <option name="slotName" />
+      <option name="slotPanelVisible" value="false" />
+      <option name="stack" value="TOMCAT" />
+      <option name="subscriptionId" value="27a72ce9-2bf8-48f2-84b2-f9c67c94537d" />
+      <option name="targetName" value="SampleServlet.war" />
+      <option name="targetPath" value="$PROJECT_DIR$/target/SampleServlet.war" />
+      <option name="uiVersion" value="NEW" />
+      <option name="version" value="8.5-jre8" />
+      <option name="webAppId" value="/subscriptions/27a72ce9-2bf8-48f2-84b2-f9c67c94537d/resourceGroups/Medicine_Inventory/providers/Microsoft.Web/sites/ShriKumarPharmacy" />
+      <option name="webAppName" value="" />
+      <option name="webContainer" value="" />
+      <method v="2">
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="package" />
+      </method>
+    </configuration>
     <configuration name="TrendsDashboard" type="com.microsoft.intellij.run.configuration.WebAppConfigurationType" factoryName="Azure Web App">
       <option name="OS" value="linux" />
       <option name="appServicePlanId" value="/subscriptions/3d68692f-9cc1-4d8c-b48a-c033a882a39f/resourceGroups/Codefundo_webapp/providers/Microsoft.Web/serverfarms/ASP-Codefundowebapp-8d4a" />
@@ -256,6 +304,7 @@
     <list>
       <item itemvalue="Azure Web App.Azure Web App:TrendsDashboard" />
       <item itemvalue="Azure Web App.TrendsDashboard" />
+      <item itemvalue="Azure Web App.MedicineInventory" />
       <item itemvalue="Tomcat Server.Unnamed" />
     </list>
   </component>
@@ -284,7 +333,11 @@
       <workItem from="1591864384476" duration="2188000" />
       <workItem from="1591875095060" duration="3519000" />
       <workItem from="1592060338292" duration="608000" />
-      <workItem from="1592073468633" duration="10917000" />
+      <workItem from="1592073468633" duration="11737000" />
+      <workItem from="1592241907876" duration="159000" />
+      <workItem from="1592328945550" duration="241000" />
+      <workItem from="1592329321937" duration="473000" />
+      <workItem from="1592493504394" duration="7373000" />
     </task>
     <task id="LOCAL-00001" summary="Backend-Frontend Integration">
       <created>1591038742460</created>
@@ -391,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592160182255</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="next commit with fixing required for update">
+      <created>1592161714513</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1592161714513</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,6 +485,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="591" y="288" key="#Azure_Web_App:_LiquorStoreApp:assetDeclare/0.0.1792.1120@0.0.1792.1120" timestamp="1589145332629" />
+    <state x="582" y="303" key="#Azure_Web_App:_LiquorStoreApp:medicineInventory" timestamp="1592501982469">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="582" y="303" key="#Azure_Web_App:_LiquorStoreApp:medicineInventory/0.0.1792.1120@0.0.1792.1120" timestamp="1592501982469" />
     <state x="1035" y="443" key="#Tomcat_Server" timestamp="1591379051689">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -437,37 +501,41 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="659" y="270" key="#xdebugger.evaluate/0.0.1792.1120@0.0.1792.1120" timestamp="1591380677688" />
-    <state width="1792" height="284" key="GridCell.Tab.0.bottom" timestamp="1592159478558">
+    <state width="1750" height="277" key="GridCell.Tab.0.bottom" timestamp="1592565472145">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1792" height="284" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1592159478558" />
+    <state width="1750" height="277" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1592565472145" />
+    <state width="1792" height="284" key="GridCell.Tab.0.bottom/0.23.1792.1024@0.23.1792.1024" timestamp="1592329197826" />
     <state width="1750" height="219" key="GridCell.Tab.0.bottom/0.23.1792.1028@0.23.1792.1028" timestamp="1588269153334" />
     <state width="1204" height="318" key="GridCell.Tab.0.bottom/0.23.1792.1034@0.23.1792.1034" timestamp="1591876449644" />
     <state width="1750" height="219" key="GridCell.Tab.0.bottom/0.23.1792.1036@0.23.1792.1036" timestamp="1587739139422" />
     <state width="1204" height="318" key="GridCell.Tab.0.bottom/0.23.1792.1037@0.23.1792.1037" timestamp="1591865573246" />
     <state width="1204" height="318" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1591798104174" />
-    <state width="1792" height="284" key="GridCell.Tab.0.center" timestamp="1592159478556">
+    <state width="1750" height="277" key="GridCell.Tab.0.center" timestamp="1592565472144">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1792" height="284" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1592159478556" />
+    <state width="1750" height="277" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1592565472144" />
+    <state width="1792" height="284" key="GridCell.Tab.0.center/0.23.1792.1024@0.23.1792.1024" timestamp="1592329197825" />
     <state width="1750" height="219" key="GridCell.Tab.0.center/0.23.1792.1028@0.23.1792.1028" timestamp="1588269153334" />
     <state width="1204" height="318" key="GridCell.Tab.0.center/0.23.1792.1034@0.23.1792.1034" timestamp="1591876449643" />
     <state width="1750" height="219" key="GridCell.Tab.0.center/0.23.1792.1036@0.23.1792.1036" timestamp="1587739139421" />
     <state width="1204" height="318" key="GridCell.Tab.0.center/0.23.1792.1037@0.23.1792.1037" timestamp="1591865573245" />
     <state width="1204" height="318" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1591798104173" />
-    <state width="1792" height="284" key="GridCell.Tab.0.left" timestamp="1592159478555">
+    <state width="1750" height="277" key="GridCell.Tab.0.left" timestamp="1592565472144">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1792" height="284" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1592159478555" />
+    <state width="1750" height="277" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1592565472144" />
+    <state width="1792" height="284" key="GridCell.Tab.0.left/0.23.1792.1024@0.23.1792.1024" timestamp="1592329197824" />
     <state width="1750" height="219" key="GridCell.Tab.0.left/0.23.1792.1028@0.23.1792.1028" timestamp="1588269153333" />
     <state width="1204" height="318" key="GridCell.Tab.0.left/0.23.1792.1034@0.23.1792.1034" timestamp="1591876449642" />
     <state width="1750" height="219" key="GridCell.Tab.0.left/0.23.1792.1036@0.23.1792.1036" timestamp="1587739139421" />
     <state width="1204" height="318" key="GridCell.Tab.0.left/0.23.1792.1037@0.23.1792.1037" timestamp="1591865573244" />
     <state width="1204" height="318" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1591798104172" />
-    <state width="1792" height="284" key="GridCell.Tab.0.right" timestamp="1592159478557">
+    <state width="1750" height="277" key="GridCell.Tab.0.right" timestamp="1592565472144">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1792" height="284" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1592159478557" />
+    <state width="1750" height="277" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1592565472144" />
+    <state width="1792" height="284" key="GridCell.Tab.0.right/0.23.1792.1024@0.23.1792.1024" timestamp="1592329197825" />
     <state width="1750" height="219" key="GridCell.Tab.0.right/0.23.1792.1028@0.23.1792.1028" timestamp="1588269153334" />
     <state width="1204" height="318" key="GridCell.Tab.0.right/0.23.1792.1034@0.23.1792.1034" timestamp="1591876449644" />
     <state width="1750" height="219" key="GridCell.Tab.0.right/0.23.1792.1036@0.23.1792.1036" timestamp="1587739139422" />
@@ -561,14 +629,14 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="514" y="424" key="SignInWindow/0.0.1792.1120@0.0.1792.1120" timestamp="1589144962163" />
-    <state x="658" y="296" key="SubscriptionsDialog" timestamp="1589144978890">
+    <state x="658" y="296" key="SubscriptionsDialog" timestamp="1592501922580">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="658" y="296" key="SubscriptionsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1589144978890" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1592160208411">
+    <state x="658" y="296" key="SubscriptionsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1592501922580" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1592161726462">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1592160208411" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1592161726462" />
     <state x="764" y="426" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1590870233738">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -582,10 +650,10 @@
     </state>
     <state x="573" y="378" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1589144890084" />
     <state x="573" y="373" key="com.intellij.ide.util.TipDialog/0.23.1792.1037@0.23.1792.1037" timestamp="1588598225880" />
-    <state x="554" y="317" width="683" height="735" key="find.popup" timestamp="1592151036608">
+    <state x="554" y="317" width="683" height="735" key="find.popup" timestamp="1592501655333">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="554" y="317" width="683" height="735" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1592151036608" />
+    <state x="554" y="317" width="683" height="735" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1592501655333" />
     <state x="718" y="461" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1592077597596">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -594,10 +662,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="264" y="182" width="1313" height="629" key="new project wizard/0.0.1792.1120@0.0.1792.1120" timestamp="1591798055006" />
-    <state x="561" y="265" width="670" height="675" key="run.anything.popup" timestamp="1592159478515">
+    <state x="561" y="265" width="670" height="675" key="run.anything.popup" timestamp="1592504703851">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="561" y="265" width="670" height="675" key="run.anything.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1592159478515" />
+    <state x="561" y="265" width="670" height="675" key="run.anything.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1592504703851" />
     <state x="561" y="265" width="670" height="675" key="run.anything.popup/0.23.1792.1036@0.23.1792.1036" timestamp="1591375658263" />
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1591865287473">
       <screen x="0" y="0" width="1792" height="1120" />

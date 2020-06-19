@@ -3,11 +3,11 @@ package com.sample;//package com.sample;
 
 
 import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -83,6 +83,10 @@ public class inventoryServlet extends HttpServlet{
                     outputStream.flush();
                     outputStream.close();
                     file.close();
+
+//                    RequestDispatcher view = req.getRequestDispatcher("result.jsp");
+//                    view.forward(req, resp);
+                    resp.sendRedirect("index.html");
                 }
                 catch (IOException | EncryptedDocumentException
                         ex) {
@@ -104,10 +108,10 @@ public class inventoryServlet extends HttpServlet{
                 String addOrSold = req.getParameter("addorsold");
                 Integer number = Integer.parseInt(req.getParameter("number")+"");
 
-                Integer updatedNumber = 0;
+                Float updatedNumber = 0.f;
 
                 if(addOrSold.equals("-1")){
-                        number = -number;
+                    number = -number;
 
                 }
 
@@ -115,22 +119,25 @@ public class inventoryServlet extends HttpServlet{
                     String absoluteDiskPath = getServletContext().getRealPath("medicineInventory.xlsx");
                     filePath = absoluteDiskPath;
                     FileInputStream file = new FileInputStream(new File(filePath));
+                    System.out.println(filePath);
 
                     XSSFWorkbook workbook = new XSSFWorkbook(file);
                     XSSFSheet sheet = workbook.getSheetAt(0);
                     Cell cell = null;
 
+                    for(int i=0;i<sheet.getLastRowNum()+1;i++) {
+                        cell = sheet.getRow(i).getCell(2);
+                        String cellVal = cell.getStringCellValue();
+                        System.out.println("Cellvalue is " + cellVal);
 
-                    cell = sheet.getRow(3).getCell(3);
-                    String cellVal = cell.getStringCellValue();
-                    System.out.println("Cellvalue is "+cellVal);
+                        if (cellVal.equals(medicineId)) {
 
-                    if(cellVal.equals(medicineId)){
-
-                        Integer existingNumber = Integer.parseInt(sheet.getRow(3).getCell(4)+"");
-                        updatedNumber = existingNumber + number;
-                        cell = sheet.getRow(3).getCell(4);
-                        cell.setCellValue(updatedNumber);
+                            Float existingNumber = Float.parseFloat(sheet.getRow(i).getCell(4) + "");
+                            updatedNumber = existingNumber + number;
+                            cell = sheet.getRow(i).getCell(4);
+                            cell.setCellValue(updatedNumber);
+                            break;
+                        }
                     }
 
                     file.close();
@@ -138,6 +145,10 @@ public class inventoryServlet extends HttpServlet{
                     FileOutputStream outFile = new FileOutputStream(new File(filePath));
                     workbook.write(outFile);
                     outFile.close();
+
+//                    RequestDispatcher view = req.getRequestDispatcher("index.html");
+//                    view.forward(req, resp);
+                    resp.sendRedirect("index.html");
 
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();

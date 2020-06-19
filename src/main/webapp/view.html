@@ -85,7 +85,7 @@
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-        <h1 class="logo mr-auto"><a href="index.html">Medicine Inventory</a></h1>
+        <h1 class="logo mr-auto"><a href="index.html">SHRI KUMAR PHARMACY</a></h1>
 
 
 
@@ -97,13 +97,13 @@
         <div class="container">
 
             <div class="section-title">
-                <!-- <span>Report Print</span> -->
-                <h2>Medicine Inventory</h2>
+
+                <h2>Stock Details</h2>
             </div>
 
             <div class="row">
                 <div class="col-sm-6 ">
-                    <!--                    <h1>Enter the location name</h1>-->
+
 
                     <table id="table_id" class="display">
                         <thead>
@@ -218,17 +218,7 @@
             reader.readAsBinaryString(file);
         };
     };
-    // function loadFile(filePath) {
-    //     var result = null;
-    //     var xmlhttp = new XMLHttpRequest();
-    //     xmlhttp.open("GET", filePath, false);
-    //     xmlhttp.responseType = 'blob';
-    //     xmlhttp.send();
-    //     if (xmlhttp.status==200) {
-    //         result = xmlhttp.responseText;
-    //     }
-    //     return result;
-    // }
+
     var file1;
     jQuery.ajax({
         url:'medicineInventory.xlsx',
@@ -261,11 +251,11 @@
             ],
             data: jsonTable,
             columns: [
-                {data:'SL'},
-                {data: 'Medicine'},
-                {data: 'Id'},
-                {data: 'Quantity'},
-                {data: 'Sold'}
+                {"title": "Sl No",data:'Sl No'},
+                {"title": "Medicine Number", data: 'Medicine Number'},
+                {"title": "Medicine ID",data: 'Medicine ID'},
+                {"title": "Cost of 1 unit",data: 'Cost of 1 unit'},
+                {"title": "Quantity in Stock",data: 'Quantity in Stock'}
             ]
 
         });

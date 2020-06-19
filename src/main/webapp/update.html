@@ -85,7 +85,7 @@
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-        <h1 class="logo mr-auto"><a href="index.html">Medicine Inventory</a></h1>
+        <h1 class="logo mr-auto"><a href="index.html">SHRI KUMAR PHARMACY</a></h1>
 
 
 
@@ -98,20 +98,20 @@
 
             <div class="section-title">
                 <!-- <span>Report Print</span> -->
-                <h2>Medicine Inventory</h2>
+                <h2>Update Existing Stocks</h2>
             </div>
 
             <div class="row">
-                <div class="col-sm-6 ">
+                <div class="col-sm-4 ">
 
                     <form action="update" method="post">
                         <label for="medicinename">Medicine Name:</label><br>
                         <input type="text" id="medicinename" name="medicinename"  required><br>
                         <label for="id">Medicine Number:</label><br>
                         <input type="text" id="id" name="id"  required><br><br>
-                        <input type="radio" name="addorsold" value="-1" >
+                        <input type="radio" name="addorsold" value="+1" >
                         <label >Add&nbsp;&nbsp;&nbsp;</label>
-                        <input type="radio" name="addorsold" value="+1" checked>
+                        <input type="radio" name="addorsold" value="-1" checked>
                         <label >Sold</label><br>
 
                         <label for="number">Enter number of units:</label><br>
@@ -124,6 +124,7 @@
 
 
                 </div>
+
             </div>
 
             <div>
